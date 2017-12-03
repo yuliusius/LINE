@@ -48,7 +48,7 @@ helpMessage =""" Chivas Bot
 [jointicket]
 [Cancel]
 [Gn 「group name」]
-[Nk 「name」]
+
 
 [*] Command kicker only [*]
 
@@ -81,7 +81,7 @@ wait = {
     'contact':True,
     'autoJoin':True,
     'autoCancel':{"on":True,"members":1},
-    'leaveRoom':True,
+    'leaveRoom':False,
     'timeline':True,
     'autoAdd':True,
     'message':"Thanks for add me",
@@ -92,7 +92,7 @@ wait = {
     "wblack":False,
     "dblack":False,
     "clock":True,
-    "cName":"Chivas ",
+    "cName":"Ius ",
     "blacklist":{},
     "wblacklist":False,
     "dblacklist":False,
@@ -1410,7 +1410,7 @@ def bot(op):
                         G.preventJoinByTicket = True
                         kc.updateGroup(G)
 #-----------------------------------------------
-            elif msg.text in ["Bye all"]:
+            elif msg.text in ["DADAH all"]:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -1426,7 +1426,7 @@ def bot(op):
                         ki.leaveGroup(msg.to)
                     except:
                         pass
-            elif msg.text in ["Bye 2"]:
+            elif msg.text in ["DADAH 2"]:
                 if msg.toType == 2:
                     ginfo = cl.getGroup(msg.to)
                     try:
@@ -1456,7 +1456,7 @@ def bot(op):
                     except:
                         pass
 #-----------------------------------------------
-            elif msg.text in ["Kill"]:
+            elif msg.text in ["Killem"]:
                 if msg.toType == 2:
                     group = ki.getGroup(msg.to)
                     gMembMids = [contact.mid for contact in group.members]
@@ -1504,7 +1504,7 @@ def bot(op):
                                 ki.sendText(msg.to,"Group cleanse")
                                 kk.sendText(msg.to,"Group cleanse")
                                 kc.sendText(msg.to,"Group cleanse")
-            elif "Nk " in msg.text:
+            elif "NomorKartu " in msg.text:
                   if msg.from_ in admin:
                        nk0 = msg.text.replace("Nk ","")
                        nk1 = nk0.lstrip()
